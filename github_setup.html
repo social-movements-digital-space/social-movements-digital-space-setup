@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Nikolina Filiposki">
+<meta name="author" content="Nikolina">
 
 <title>GitHub Course Setup</title>
 <style>
@@ -75,7 +75,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="github_setup_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="github_setup_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="github_setup_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="github_setup_files/libs/bootstrap/bootstrap-e491f8ff3e9ef7ba1930cda3f1cae37e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="github_setup_files/libs/bootstrap/bootstrap-ca54cbca69027f2e727ddaba63ec68f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 </head>
@@ -85,20 +86,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Contents</h2>
    
-  <ul>
-  <li><a href="#what-github-is-used-for" id="toc-what-github-is-used-for" class="nav-link active" data-scroll-target="#what-github-is-used-for"><span class="header-section-number">1</span> What GitHub Is Used For</a></li>
-  <li><a href="#open-the-course-repository" id="toc-open-the-course-repository" class="nav-link" data-scroll-target="#open-the-course-repository"><span class="header-section-number">2</span> Open the Course Repository</a></li>
-  <li><a href="#get-the-course-files" id="toc-get-the-course-files" class="nav-link" data-scroll-target="#get-the-course-files"><span class="header-section-number">3</span> Get the Course Files</a>
   <ul class="collapse">
-  <li><a href="#easiest-option-download-zip" id="toc-easiest-option-download-zip" class="nav-link" data-scroll-target="#easiest-option-download-zip"><span class="header-section-number">3.1</span> Easiest option: Download ZIP</a></li>
-  <li><a href="#optional-clone-with-git" id="toc-optional-clone-with-git" class="nav-link" data-scroll-target="#optional-clone-with-git"><span class="header-section-number">3.2</span> Optional: Clone with Git</a></li>
+  <li><a href="#before-you-start" id="toc-before-you-start" class="nav-link active" data-scroll-target="#before-you-start"><span class="header-section-number">1</span> Before You Start</a>
+  <ul class="collapse">
+  <li><a href="#create-a-github-account" id="toc-create-a-github-account" class="nav-link" data-scroll-target="#create-a-github-account"><span class="header-section-number">1.1</span> Create a GitHub Account</a></li>
+  <li><a href="#send-us-your-github-username" id="toc-send-us-your-github-username" class="nav-link" data-scroll-target="#send-us-your-github-username"><span class="header-section-number">1.2</span> Send Us Your GitHub Username</a></li>
+  <li><a href="#accept-the-course-invitation" id="toc-accept-the-course-invitation" class="nav-link" data-scroll-target="#accept-the-course-invitation"><span class="header-section-number">1.3</span> Accept the Course Invitation</a></li>
   </ul></li>
-  <li><a href="#find-the-session-3b-files" id="toc-find-the-session-3b-files" class="nav-link" data-scroll-target="#find-the-session-3b-files"><span class="header-section-number">4</span> Find the Session 3b Files</a></li>
-  <li><a href="#important" id="toc-important" class="nav-link" data-scroll-target="#important"><span class="header-section-number">5</span> Important</a></li>
-  <li><a href="#quick-check" id="toc-quick-check" class="nav-link" data-scroll-target="#quick-check"><span class="header-section-number">6</span> Quick Check</a></li>
-  <li><a href="#ready" id="toc-ready" class="nav-link" data-scroll-target="#ready"><span class="header-section-number">7</span> Ready</a></li>
+  <li><a href="#what-github-is-used-for" id="toc-what-github-is-used-for" class="nav-link" data-scroll-target="#what-github-is-used-for"><span class="header-section-number">2</span> What GitHub Is Used For</a></li>
+  <li><a href="#open-the-course-repository" id="toc-open-the-course-repository" class="nav-link" data-scroll-target="#open-the-course-repository"><span class="header-section-number">3</span> Open the Course Repository</a></li>
+  <li><a href="#recommended-use-github-desktop" id="toc-recommended-use-github-desktop" class="nav-link" data-scroll-target="#recommended-use-github-desktop"><span class="header-section-number">4</span> Recommended: Use GitHub Desktop</a>
+  <ul class="collapse">
+  <li><a href="#clone-the-course-repository" id="toc-clone-the-course-repository" class="nav-link" data-scroll-target="#clone-the-course-repository"><span class="header-section-number">4.1</span> Clone the Course Repository</a></li>
+  </ul></li>
+  <li><a href="#getting-new-course-material" id="toc-getting-new-course-material" class="nav-link" data-scroll-target="#getting-new-course-material"><span class="header-section-number">5</span> Getting New Course Material</a></li>
+  <li><a href="#alternative-download-zip" id="toc-alternative-download-zip" class="nav-link" data-scroll-target="#alternative-download-zip"><span class="header-section-number">6</span> Alternative: Download ZIP</a></li>
+  <li><a href="#optional-clone-with-git" id="toc-optional-clone-with-git" class="nav-link" data-scroll-target="#optional-clone-with-git"><span class="header-section-number">7</span> Optional: Clone with Git</a></li>
+  <li><a href="#find-the-session-3b-files" id="toc-find-the-session-3b-files" class="nav-link" data-scroll-target="#find-the-session-3b-files"><span class="header-section-number">8</span> Find the Session 3b Files</a></li>
+  <li><a href="#keep-the-repository-structure-intact" id="toc-keep-the-repository-structure-intact" class="nav-link" data-scroll-target="#keep-the-repository-structure-intact"><span class="header-section-number">9</span> Keep the Repository Structure Intact</a></li>
+  <li><a href="#important-course-materials-are-released-gradually" id="toc-important-course-materials-are-released-gradually" class="nav-link" data-scroll-target="#important-course-materials-are-released-gradually"><span class="header-section-number">10</span> Important: Course Materials Are Released Gradually</a></li>
+  <li><a href="#quick-check" id="toc-quick-check" class="nav-link" data-scroll-target="#quick-check"><span class="header-section-number">11</span> Quick Check</a></li>
+  <li><a href="#ready" id="toc-ready" class="nav-link" data-scroll-target="#ready"><span class="header-section-number">12</span> Ready</a></li>
   </ul>
 </nav>
 </div>
@@ -117,16 +127,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Nikolina Filiposki </p>
+             <p>Nikolina </p>
           </div>
   </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
-    </div>
-  </div>
   
     
   </div>
@@ -135,88 +139,216 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-
-<section id="what-github-is-used-for" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> What GitHub Is Used For</h1>
-<p>GitHub is where the course materials are stored.</p>
+<nav id="TOC-body" role="doc-toc">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#before-you-start" id="toc-before-you-start"><span class="header-section-number">1</span> Before You Start</a>
+  <ul>
+  <li><a href="#create-a-github-account" id="toc-create-a-github-account"><span class="header-section-number">1.1</span> Create a GitHub Account</a></li>
+  <li><a href="#send-us-your-github-username" id="toc-send-us-your-github-username"><span class="header-section-number">1.2</span> Send Us Your GitHub Username</a></li>
+  <li><a href="#accept-the-course-invitation" id="toc-accept-the-course-invitation"><span class="header-section-number">1.3</span> Accept the Course Invitation</a></li>
+  </ul></li>
+  <li><a href="#what-github-is-used-for" id="toc-what-github-is-used-for"><span class="header-section-number">2</span> What GitHub Is Used For</a></li>
+  <li><a href="#open-the-course-repository" id="toc-open-the-course-repository"><span class="header-section-number">3</span> Open the Course Repository</a></li>
+  <li><a href="#recommended-use-github-desktop" id="toc-recommended-use-github-desktop"><span class="header-section-number">4</span> Recommended: Use GitHub Desktop</a>
+  <ul>
+  <li><a href="#clone-the-course-repository" id="toc-clone-the-course-repository"><span class="header-section-number">4.1</span> Clone the Course Repository</a></li>
+  </ul></li>
+  <li><a href="#getting-new-course-material" id="toc-getting-new-course-material"><span class="header-section-number">5</span> Getting New Course Material</a></li>
+  <li><a href="#alternative-download-zip" id="toc-alternative-download-zip"><span class="header-section-number">6</span> Alternative: Download ZIP</a></li>
+  <li><a href="#optional-clone-with-git" id="toc-optional-clone-with-git"><span class="header-section-number">7</span> Optional: Clone with Git</a></li>
+  <li><a href="#find-the-session-3b-files" id="toc-find-the-session-3b-files"><span class="header-section-number">8</span> Find the Session 3b Files</a></li>
+  <li><a href="#keep-the-repository-structure-intact" id="toc-keep-the-repository-structure-intact"><span class="header-section-number">9</span> Keep the Repository Structure Intact</a></li>
+  <li><a href="#important-course-materials-are-released-gradually" id="toc-important-course-materials-are-released-gradually"><span class="header-section-number">10</span> Important: Course Materials Are Released Gradually</a></li>
+  <li><a href="#quick-check" id="toc-quick-check"><span class="header-section-number">11</span> Quick Check</a></li>
+  <li><a href="#ready" id="toc-ready"><span class="header-section-number">12</span> Ready</a></li>
+  </ul>
+</nav>
+<section id="before-you-start" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Before You Start</h1>
+<p>The course materials are stored in a <strong>private GitHub repository</strong>.</p>
+<p>Before you can access the repository, you need a GitHub account.</p>
+<section id="create-a-github-account" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="create-a-github-account"><span class="header-section-number">1.1</span> Create a GitHub Account</h2>
+<p>If you do not already have an account:</p>
+<ol type="1">
+<li>Go to <a href="https://github.com/">GitHub</a>.</li>
+<li>Choose <strong>Sign up</strong>.</li>
+<li>Create a free account.</li>
+<li>Confirm your email address.</li>
+<li>Sign in.</li>
+</ol>
+<p>You do <strong>not</strong> need a paid GitHub account for this course.</p>
+</section>
+<section id="send-us-your-github-username" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="send-us-your-github-username"><span class="header-section-number">1.2</span> Send Us Your GitHub Username</h2>
+<p>After creating your account, find your GitHub username.</p>
+<p>Your username appears in the URL of your GitHub profile:</p>
+<pre class="text"><code>https://github.com/your-username</code></pre>
+<p>Send the required course registration information to the instructors, including:</p>
+<ul>
+<li>your name;</li>
+<li>your GitHub username;</li>
+<li>any additional information requested for the course.</li>
+</ul>
+<p>Your GitHub username is required so that we can give you access to the private course repository.</p>
+</section>
+<section id="accept-the-course-invitation" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="accept-the-course-invitation"><span class="header-section-number">1.3</span> Accept the Course Invitation</h2>
+<p>After we add you to the course organization, GitHub will send you an invitation.</p>
+<p>Please:</p>
+<ol type="1">
+<li>open the invitation;</li>
+<li>accept it;</li>
+<li>sign in to GitHub if necessary.</li>
+</ol>
+<p>You will not be able to access the private course repository until the invitation has been accepted.</p>
+</section>
+</section>
+<section id="what-github-is-used-for" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> What GitHub Is Used For</h1>
+<p>GitHub is where we distribute course materials.</p>
 <p>You will use it to access:</p>
 <ul>
 <li>slides;</li>
 <li>R scripts;</li>
 <li>datasets;</li>
+<li>exercises;</li>
 <li>supporting material.</li>
 </ul>
+<p>New material will be released throughout the semester.</p>
 <p>You do <strong>not</strong> need to learn Git in detail for this course.</p>
 </section>
-<section id="open-the-course-repository" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Open the Course Repository</h1>
-<p>Course repository:</p>
-<p><a href="https://github.com/NikolinaFiliposki/social-movements-digital-space-2026"><strong>Social Movements in the Digital Space — GitHub</strong></a></p>
+<section id="open-the-course-repository" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Open the Course Repository</h1>
+<p>After accepting the invitation, open the student course repository:</p>
+<p><a href="https://github.com/social-movements-digital-space/social-movements-digital-space-students-2026"><strong>Social Movements in the Digital Space — Course Repository</strong></a></p>
+<p>If GitHub says that the repository does not exist or that you do not have access, check that:</p>
+<ul>
+<li>you are signed into the correct GitHub account;</li>
+<li>you sent us the correct username;</li>
+<li>you accepted the GitHub invitation.</li>
+</ul>
 </section>
-<section id="get-the-course-files" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Get the Course Files</h1>
-<section id="easiest-option-download-zip" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="easiest-option-download-zip"><span class="header-section-number">3.1</span> Easiest option: Download ZIP</h2>
+<section id="recommended-use-github-desktop" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Recommended: Use GitHub Desktop</h1>
+<p>Because new course material will be released during the semester, the easiest workflow is to <strong>clone the repository once</strong> and update it later.</p>
+<p>For students who have not used Git before, we recommend <strong>GitHub Desktop</strong>.</p>
+<p>Download it from:</p>
+<p><a href="https://desktop.github.com/"><strong>GitHub Desktop</strong></a></p>
+<p>Install the program using the normal installation procedure for your operating system.</p>
+<section id="clone-the-course-repository" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="clone-the-course-repository"><span class="header-section-number">4.1</span> Clone the Course Repository</h2>
+<p>After installing GitHub Desktop:</p>
+<ol type="1">
+<li>open <strong>GitHub Desktop</strong>;</li>
+<li>sign in with the same GitHub account you use for the course;</li>
+<li>choose <strong>File → Clone repository</strong>;</li>
+<li>choose the course repository;</li>
+<li>select a location on your computer;</li>
+<li>choose <strong>Clone</strong>.</li>
+</ol>
+<p>For example:</p>
+<pre class="text"><code>Documents/
+└── course-repository/</code></pre>
+<p>The exact name of the outermost folder may differ.</p>
+<p>Please keep the folders <strong>inside the repository</strong> unchanged.</p>
+</section>
+</section>
+<section id="getting-new-course-material" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Getting New Course Material</h1>
+<p>You only need to clone the repository once.</p>
+<p>When new material is released:</p>
+<ol type="1">
+<li>open GitHub Desktop;</li>
+<li>select the course repository;</li>
+<li>choose <strong>Fetch origin</strong>;</li>
+<li>if changes are available, choose <strong>Pull origin</strong>.</li>
+</ol>
+<p>This updates your local copy with newly released course material.</p>
+</section>
+<section id="alternative-download-zip" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Alternative: Download ZIP</h1>
+<p>If GitHub Desktop does not work, you can download the repository manually.</p>
 <p>On the GitHub repository page:</p>
 <ol type="1">
 <li>click <strong>Code</strong>;</li>
 <li>choose <strong>Download ZIP</strong>;</li>
-<li>unzip the folder;</li>
-<li>save it somewhere you can find again.</li>
+<li>unzip the downloaded file;</li>
+<li>save the folder somewhere you can find again.</li>
 </ol>
-<p>For example:</p>
-<pre class="text"><code>Documents/
-└── social_movements_digital_space/</code></pre>
-<p>Do not move individual scripts or data files out of the repository.</p>
-<p>Keeping the folder structure intact helps the R code find the correct files.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you use <strong>Download ZIP</strong>, your local copy does not update automatically.</p>
+<p>When new material is released later in the semester, you may need to download the repository again.</p>
+</div>
+</div>
 </section>
-<section id="optional-clone-with-git" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="optional-clone-with-git"><span class="header-section-number">3.2</span> Optional: Clone with Git</h2>
-<p>If you already use Git, you can clone the repository instead:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/NikolinaFiliposki/social-movements-digital-space-2026.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>You do not need this option for Session 3b.</p>
+<section id="optional-clone-with-git" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Optional: Clone with Git</h1>
+<p>If you already use Git from the command line, you can clone the repository directly:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/social-movements-digital-space/social-movements-digital-space-students-2026.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You do not need to use command-line Git for this course.</p>
 </section>
-</section>
-<section id="find-the-session-3b-files" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Find the Session 3b Files</h1>
-<p>The relevant folder is:</p>
-<pre class="text"><code>social_movements_digital_space/
+<section id="find-the-session-3b-files" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Find the Session 3b Files</h1>
+<p>For the R Crash Course, locate:</p>
+<pre class="text"><code>course-repository/
 └── 03b_r_crash_course/
     ├── code/
     ├── data/
     └── slides/</code></pre>
-<p>For the R Crash Course, you will mainly use:</p>
+<p>The relevant teaching files include:</p>
 <pre class="text"><code>03b_r_crash_course/
 ├── code/
 │   └── session3b_starter.R
 └── data/
     └── bluesky_climate_sample.csv</code></pre>
 </section>
-<section id="important" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Important</h1>
+<section id="keep-the-repository-structure-intact" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Keep the Repository Structure Intact</h1>
 <p>Please:</p>
 <ul>
-<li>keep the repository folder structure intact;</li>
 <li>do not rename the course folders;</li>
-<li>do not move the dataset away from the <code>data</code> folder;</li>
-<li>open the provided R script rather than creating a new empty file.</li>
+<li>do not move individual datasets elsewhere;</li>
+<li>do not move scripts away from their session folders;</li>
+<li>keep the repository structure intact.</li>
 </ul>
+<p>This helps the R exercises locate files consistently.</p>
 </section>
-<section id="quick-check" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Quick Check</h1>
+<section id="important-course-materials-are-released-gradually" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Important: Course Materials Are Released Gradually</h1>
+<p>The repository may not contain every future session yet.</p>
+<p>This is intentional.</p>
+<p>Course materials will be released according to the seminar schedule, and solutions may be added after the corresponding session.</p>
+</section>
+<section id="quick-check" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Quick Check</h1>
 <p>Before Session 3b:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">I can open the GitHub repository.</label></li>
-<li><label><input type="checkbox">I downloaded or cloned the course files.</label></li>
-<li><label><input type="checkbox">I unzipped the folder if I used Download ZIP.</label></li>
+<li><label><input type="checkbox">I have a GitHub account.</label></li>
+<li><label><input type="checkbox">I sent my GitHub username to the instructors.</label></li>
+<li><label><input type="checkbox">I accepted the GitHub invitation.</label></li>
+<li><label><input type="checkbox">I can open the private course repository.</label></li>
+<li><label><input type="checkbox">I cloned or downloaded the course repository.</label></li>
 <li><label><input type="checkbox">I can find <code>03b_r_crash_course</code>.</label></li>
 <li><label><input type="checkbox">I can find <code>session3b_starter.R</code>.</label></li>
 <li><label><input type="checkbox">I can find <code>bluesky_climate_sample.csv</code>.</label></li>
 </ul>
 </section>
-<section id="ready" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Ready</h1>
-<p>If you can find both the starter script and the dataset, the GitHub setup is complete.</p>
+<section id="ready" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Ready</h1>
+<p>If you can access the repository and locate the Session 3b files, your GitHub setup is complete.</p>
+<p>Continue with the <strong>R and RStudio Setup</strong> guide before the R Crash Course.</p>
 </section>
 
 </main>
@@ -626,4 +758,5 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<script src="github_setup_files/libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Nikolina Filiposki">
+<meta name="author" content="Nikolina">
 
 <title>R and RStudio Setup</title>
 <style>
@@ -75,38 +75,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="r_setup_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="r_setup_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="r_setup_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="r_setup_files/libs/bootstrap/bootstrap-e491f8ff3e9ef7ba1930cda3f1cae37e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="r_setup_files/libs/bootstrap/bootstrap-ca54cbca69027f2e727ddaba63ec68f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -115,7 +86,7 @@ window.Quarto = {
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Contents</h2>
    
   <ul class="collapse">
   <li><a href="#before-session-3b" id="toc-before-session-3b" class="nav-link active" data-scroll-target="#before-session-3b"><span class="header-section-number">1</span> Before Session 3b</a></li>
@@ -126,32 +97,34 @@ window.Quarto = {
   <li><a href="#linux" id="toc-linux" class="nav-link" data-scroll-target="#linux"><span class="header-section-number">2.3</span> Linux</a></li>
   </ul></li>
   <li><a href="#install-rstudio-desktop" id="toc-install-rstudio-desktop" class="nav-link" data-scroll-target="#install-rstudio-desktop"><span class="header-section-number">3</span> Install RStudio Desktop</a></li>
-  <li><a href="#open-rstudio" id="toc-open-rstudio" class="nav-link" data-scroll-target="#open-rstudio"><span class="header-section-number">4</span> Open RStudio</a></li>
+  <li><a href="#check-that-rstudio-works" id="toc-check-that-rstudio-works" class="nav-link" data-scroll-target="#check-that-rstudio-works"><span class="header-section-number">4</span> Check That RStudio Works</a></li>
   <li><a href="#install-the-packages-we-need" id="toc-install-the-packages-we-need" class="nav-link" data-scroll-target="#install-the-packages-we-need"><span class="header-section-number">5</span> Install the Packages We Need</a></li>
   <li><a href="#load-the-packages" id="toc-load-the-packages" class="nav-link" data-scroll-target="#load-the-packages"><span class="header-section-number">6</span> Load the Packages</a></li>
   <li><a href="#test-your-basic-setup" id="toc-test-your-basic-setup" class="nav-link" data-scroll-target="#test-your-basic-setup"><span class="header-section-number">7</span> Test Your Basic Setup</a></li>
   <li><a href="#get-the-course-files" id="toc-get-the-course-files" class="nav-link" data-scroll-target="#get-the-course-files"><span class="header-section-number">8</span> Get the Course Files</a></li>
-  <li><a href="#test-the-course-dataset" id="toc-test-the-course-dataset" class="nav-link" data-scroll-target="#test-the-course-dataset"><span class="header-section-number">9</span> Test the Course Dataset</a></li>
-  <li><a href="#common-problems" id="toc-common-problems" class="nav-link" data-scroll-target="#common-problems"><span class="header-section-number">10</span> Common Problems</a>
+  <li><a href="#open-the-course-rstudio-project" id="toc-open-the-course-rstudio-project" class="nav-link" data-scroll-target="#open-the-course-rstudio-project"><span class="header-section-number">9</span> Open the Course RStudio Project</a></li>
+  <li><a href="#open-the-session-3b-starter-script" id="toc-open-the-session-3b-starter-script" class="nav-link" data-scroll-target="#open-the-session-3b-starter-script"><span class="header-section-number">10</span> Open the Session 3b Starter Script</a></li>
+  <li><a href="#test-the-course-dataset" id="toc-test-the-course-dataset" class="nav-link" data-scroll-target="#test-the-course-dataset"><span class="header-section-number">11</span> Test the Course Dataset</a></li>
+  <li><a href="#common-problems" id="toc-common-problems" class="nav-link" data-scroll-target="#common-problems"><span class="header-section-number">12</span> Common Problems</a>
   <ul class="collapse">
-  <li><a href="#there-is-no-package-called-..." id="toc-there-is-no-package-called-..." class="nav-link" data-scroll-target="#there-is-no-package-called-..."><span class="header-section-number">10.1</span> <code>there is no package called ...</code></a></li>
-  <li><a href="#object-...-not-found" id="toc-object-...-not-found" class="nav-link" data-scroll-target="#object-...-not-found"><span class="header-section-number">10.2</span> <code>object '...' not found</code></a></li>
-  <li><a href="#file-does-not-exist" id="toc-file-does-not-exist" class="nav-link" data-scroll-target="#file-does-not-exist"><span class="header-section-number">10.3</span> <code>file does not exist</code></a></li>
-  <li><a href="#rstudio-opens-but-r-does-not-work" id="toc-rstudio-opens-but-r-does-not-work" class="nav-link" data-scroll-target="#rstudio-opens-but-r-does-not-work"><span class="header-section-number">10.4</span> RStudio opens, but R does not work</a></li>
-  <li><a href="#package-installation-produces-lots-of-text" id="toc-package-installation-produces-lots-of-text" class="nav-link" data-scroll-target="#package-installation-produces-lots-of-text"><span class="header-section-number">10.5</span> Package installation produces lots of text</a></li>
-  <li><a href="#rstudio-asks-to-install-additional-tools" id="toc-rstudio-asks-to-install-additional-tools" class="nav-link" data-scroll-target="#rstudio-asks-to-install-additional-tools"><span class="header-section-number">10.6</span> RStudio asks to install additional tools</a></li>
-  <li><a href="#installation-is-blocked-by-your-computer" id="toc-installation-is-blocked-by-your-computer" class="nav-link" data-scroll-target="#installation-is-blocked-by-your-computer"><span class="header-section-number">10.7</span> Installation is blocked by your computer</a></li>
+  <li><a href="#there-is-no-package-called-..." id="toc-there-is-no-package-called-..." class="nav-link" data-scroll-target="#there-is-no-package-called-..."><span class="header-section-number">12.1</span> <code>there is no package called ...</code></a></li>
+  <li><a href="#object-...-not-found" id="toc-object-...-not-found" class="nav-link" data-scroll-target="#object-...-not-found"><span class="header-section-number">12.2</span> <code>object '...' not found</code></a></li>
+  <li><a href="#file-does-not-exist" id="toc-file-does-not-exist" class="nav-link" data-scroll-target="#file-does-not-exist"><span class="header-section-number">12.3</span> <code>file does not exist</code></a></li>
+  <li><a href="#rstudio-opens-but-r-does-not-work" id="toc-rstudio-opens-but-r-does-not-work" class="nav-link" data-scroll-target="#rstudio-opens-but-r-does-not-work"><span class="header-section-number">12.4</span> RStudio opens, but R does not work</a></li>
+  <li><a href="#package-installation-produces-lots-of-text" id="toc-package-installation-produces-lots-of-text" class="nav-link" data-scroll-target="#package-installation-produces-lots-of-text"><span class="header-section-number">12.5</span> Package installation produces lots of text</a></li>
+  <li><a href="#rstudio-asks-to-install-additional-tools" id="toc-rstudio-asks-to-install-additional-tools" class="nav-link" data-scroll-target="#rstudio-asks-to-install-additional-tools"><span class="header-section-number">12.6</span> RStudio asks to install additional tools</a></li>
+  <li><a href="#installation-is-blocked-by-your-computer" id="toc-installation-is-blocked-by-your-computer" class="nav-link" data-scroll-target="#installation-is-blocked-by-your-computer"><span class="header-section-number">12.7</span> Installation is blocked by your computer</a></li>
   </ul></li>
-  <li><a href="#if-local-installation-does-not-work" id="toc-if-local-installation-does-not-work" class="nav-link" data-scroll-target="#if-local-installation-does-not-work"><span class="header-section-number">11</span> If Local Installation Does Not Work</a></li>
-  <li><a href="#where-to-get-help" id="toc-where-to-get-help" class="nav-link" data-scroll-target="#where-to-get-help"><span class="header-section-number">12</span> Where to Get Help</a>
+  <li><a href="#if-local-installation-does-not-work" id="toc-if-local-installation-does-not-work" class="nav-link" data-scroll-target="#if-local-installation-does-not-work"><span class="header-section-number">13</span> If Local Installation Does Not Work</a></li>
+  <li><a href="#where-to-get-help" id="toc-where-to-get-help" class="nav-link" data-scroll-target="#where-to-get-help"><span class="header-section-number">14</span> Where to Get Help</a>
   <ul class="collapse">
-  <li><a href="#official-software-and-documentation" id="toc-official-software-and-documentation" class="nav-link" data-scroll-target="#official-software-and-documentation"><span class="header-section-number">12.1</span> Official software and documentation</a></li>
-  <li><a href="#learning-r" id="toc-learning-r" class="nav-link" data-scroll-target="#learning-r"><span class="header-section-number">12.2</span> Learning R</a></li>
-  <li><a href="#quick-reference" id="toc-quick-reference" class="nav-link" data-scroll-target="#quick-reference"><span class="header-section-number">12.3</span> Quick reference</a></li>
+  <li><a href="#official-software-and-documentation" id="toc-official-software-and-documentation" class="nav-link" data-scroll-target="#official-software-and-documentation"><span class="header-section-number">14.1</span> Official software and documentation</a></li>
+  <li><a href="#learning-r" id="toc-learning-r" class="nav-link" data-scroll-target="#learning-r"><span class="header-section-number">14.2</span> Learning R</a></li>
+  <li><a href="#quick-reference" id="toc-quick-reference" class="nav-link" data-scroll-target="#quick-reference"><span class="header-section-number">14.3</span> Quick Reference</a></li>
   </ul></li>
-  <li><a href="#which-resource-should-i-use" id="toc-which-resource-should-i-use" class="nav-link" data-scroll-target="#which-resource-should-i-use"><span class="header-section-number">13</span> Which Resource Should I Use?</a></li>
-  <li><a href="#final-checklist" id="toc-final-checklist" class="nav-link" data-scroll-target="#final-checklist"><span class="header-section-number">14</span> Final Checklist</a></li>
-  <li><a href="#ready" id="toc-ready" class="nav-link" data-scroll-target="#ready"><span class="header-section-number">15</span> Ready</a></li>
+  <li><a href="#which-resource-should-i-use" id="toc-which-resource-should-i-use" class="nav-link" data-scroll-target="#which-resource-should-i-use"><span class="header-section-number">15</span> Which Resource Should I Use?</a></li>
+  <li><a href="#final-checklist" id="toc-final-checklist" class="nav-link" data-scroll-target="#final-checklist"><span class="header-section-number">16</span> Final Checklist</a></li>
+  <li><a href="#ready" id="toc-ready" class="nav-link" data-scroll-target="#ready"><span class="header-section-number">17</span> Ready</a></li>
   </ul>
 </nav>
 </div>
@@ -170,16 +143,10 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Nikolina Filiposki </p>
+             <p>Nikolina </p>
           </div>
   </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
-    </div>
-  </div>
   
     
   </div>
@@ -188,7 +155,48 @@ window.Quarto = {
 
 </header>
 
-
+<nav id="TOC-body" role="doc-toc">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#before-session-3b" id="toc-before-session-3b"><span class="header-section-number">1</span> Before Session 3b</a></li>
+  <li><a href="#install-r" id="toc-install-r"><span class="header-section-number">2</span> Install R</a>
+  <ul>
+  <li><a href="#windows" id="toc-windows"><span class="header-section-number">2.1</span> Windows</a></li>
+  <li><a href="#macos" id="toc-macos"><span class="header-section-number">2.2</span> macOS</a></li>
+  <li><a href="#linux" id="toc-linux"><span class="header-section-number">2.3</span> Linux</a></li>
+  </ul></li>
+  <li><a href="#install-rstudio-desktop" id="toc-install-rstudio-desktop"><span class="header-section-number">3</span> Install RStudio Desktop</a></li>
+  <li><a href="#check-that-rstudio-works" id="toc-check-that-rstudio-works"><span class="header-section-number">4</span> Check That RStudio Works</a></li>
+  <li><a href="#install-the-packages-we-need" id="toc-install-the-packages-we-need"><span class="header-section-number">5</span> Install the Packages We Need</a></li>
+  <li><a href="#load-the-packages" id="toc-load-the-packages"><span class="header-section-number">6</span> Load the Packages</a></li>
+  <li><a href="#test-your-basic-setup" id="toc-test-your-basic-setup"><span class="header-section-number">7</span> Test Your Basic Setup</a></li>
+  <li><a href="#get-the-course-files" id="toc-get-the-course-files"><span class="header-section-number">8</span> Get the Course Files</a></li>
+  <li><a href="#open-the-course-rstudio-project" id="toc-open-the-course-rstudio-project"><span class="header-section-number">9</span> Open the Course RStudio Project</a></li>
+  <li><a href="#open-the-session-3b-starter-script" id="toc-open-the-session-3b-starter-script"><span class="header-section-number">10</span> Open the Session 3b Starter Script</a></li>
+  <li><a href="#test-the-course-dataset" id="toc-test-the-course-dataset"><span class="header-section-number">11</span> Test the Course Dataset</a></li>
+  <li><a href="#common-problems" id="toc-common-problems"><span class="header-section-number">12</span> Common Problems</a>
+  <ul>
+  <li><a href="#there-is-no-package-called-..." id="toc-there-is-no-package-called-..."><span class="header-section-number">12.1</span> <code>there is no package called ...</code></a></li>
+  <li><a href="#object-...-not-found" id="toc-object-...-not-found"><span class="header-section-number">12.2</span> <code>object '...' not found</code></a></li>
+  <li><a href="#file-does-not-exist" id="toc-file-does-not-exist"><span class="header-section-number">12.3</span> <code>file does not exist</code></a></li>
+  <li><a href="#rstudio-opens-but-r-does-not-work" id="toc-rstudio-opens-but-r-does-not-work"><span class="header-section-number">12.4</span> RStudio opens, but R does not work</a></li>
+  <li><a href="#package-installation-produces-lots-of-text" id="toc-package-installation-produces-lots-of-text"><span class="header-section-number">12.5</span> Package installation produces lots of text</a></li>
+  <li><a href="#rstudio-asks-to-install-additional-tools" id="toc-rstudio-asks-to-install-additional-tools"><span class="header-section-number">12.6</span> RStudio asks to install additional tools</a></li>
+  <li><a href="#installation-is-blocked-by-your-computer" id="toc-installation-is-blocked-by-your-computer"><span class="header-section-number">12.7</span> Installation is blocked by your computer</a></li>
+  </ul></li>
+  <li><a href="#if-local-installation-does-not-work" id="toc-if-local-installation-does-not-work"><span class="header-section-number">13</span> If Local Installation Does Not Work</a></li>
+  <li><a href="#where-to-get-help" id="toc-where-to-get-help"><span class="header-section-number">14</span> Where to Get Help</a>
+  <ul>
+  <li><a href="#official-software-and-documentation" id="toc-official-software-and-documentation"><span class="header-section-number">14.1</span> Official software and documentation</a></li>
+  <li><a href="#learning-r" id="toc-learning-r"><span class="header-section-number">14.2</span> Learning R</a></li>
+  <li><a href="#quick-reference" id="toc-quick-reference"><span class="header-section-number">14.3</span> Quick Reference</a></li>
+  </ul></li>
+  <li><a href="#which-resource-should-i-use" id="toc-which-resource-should-i-use"><span class="header-section-number">15</span> Which Resource Should I Use?</a></li>
+  <li><a href="#final-checklist" id="toc-final-checklist"><span class="header-section-number">16</span> Final Checklist</a></li>
+  <li><a href="#ready" id="toc-ready"><span class="header-section-number">17</span> Ready</a></li>
+  </ul>
+</nav>
 <section id="before-session-3b" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Before Session 3b</h1>
 <p>For the R Crash Course, you need:</p>
@@ -196,16 +204,17 @@ window.Quarto = {
 <li><strong>R</strong></li>
 <li><strong>RStudio Desktop</strong></li>
 <li>the packages <strong>tidyverse</strong> and <strong>here</strong></li>
-<li>access to the seminar repository / course files</li>
+<li>access to the course repository</li>
+<li>the Session 3b teaching files</li>
 </ol>
 <p>Please complete the setup <strong>before the session</strong>.</p>
 <p>You do not need previous programming experience.</p>
-<p>If something does not work, do not worry about understanding the technical reason yet. Use the troubleshooting section below and contact the instructor if the problem remains.</p>
+<p>If something does not work, use the troubleshooting section below and contact the instructor if the problem remains.</p>
 </section>
 <section id="install-r" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Install R</h1>
 <p>R is the programming language that executes our code.</p>
-<p>Go to the official R Project website:</p>
+<p>Go to:</p>
 <p><a href="https://www.r-project.org/"><strong>Download R — The R Project</strong></a></p>
 <p>Choose a CRAN mirror and then select your operating system:</p>
 <ul>
@@ -232,7 +241,7 @@ window.Quarto = {
 <li>Choose <strong>Download R for macOS</strong>.</li>
 <li>Download the installer appropriate for your Mac.</li>
 <li>Open the installer.</li>
-<li>Follow the normal installation steps.</li>
+<li>Follow the standard installation steps.</li>
 </ol>
 </section>
 <section id="linux" class="level2" data-number="2.3">
@@ -246,22 +255,22 @@ window.Quarto = {
 <h1 data-number="3"><span class="header-section-number">3</span> Install RStudio Desktop</h1>
 <p>RStudio is the program in which we will write and run most of our R code.</p>
 <p>R and RStudio are different:</p>
-<p>[ = ]</p>
-<p>[ = ]</p>
+<p>R = programming language</p>
+<p>RStudio = environment for working with R</p>
 <p>Install <strong>R first</strong> and <strong>RStudio second</strong>.</p>
 <p>Download RStudio Desktop from Posit:</p>
 <p><a href="https://posit.co/download/rstudio-desktop/"><strong>Download RStudio Desktop</strong></a></p>
-<p>Choose the free/open-source RStudio Desktop installer for your operating system and follow the standard installation process.</p>
+<p>Choose the free RStudio Desktop installer for your operating system and follow the standard installation process.</p>
 </section>
-<section id="open-rstudio" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Open RStudio</h1>
+<section id="check-that-rstudio-works" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Check That RStudio Works</h1>
 <p>After both programs are installed:</p>
 <ol type="1">
-<li>Open <strong>RStudio</strong>.</li>
-<li>Wait until the Console appears.</li>
-<li>You should see information about your R version near the top of the Console.</li>
+<li>open <strong>RStudio</strong>;</li>
+<li>wait until the Console appears;</li>
+<li>look for information about your R version near the top of the Console.</li>
 </ol>
-<p>Try:</p>
+<p>Type:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You should see:</p>
 <pre class="text"><code>[1] 2</code></pre>
@@ -279,7 +288,7 @@ window.Quarto = {
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"here"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Installation may take a few minutes.</p>
-<p>You normally need to <strong>install a package only once on a computer</strong>.</p>
+<p>You normally need to install a package only <strong>once per computer</strong>.</p>
 </section>
 <section id="load-the-packages" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Load the Packages</h1>
@@ -287,7 +296,7 @@ window.Quarto = {
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If both commands run without an error, the package setup is complete.</p>
-<p>Remember the distinction:</p>
+<p>Remember:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>means:</p>
 <blockquote class="blockquote">
@@ -315,52 +324,84 @@ window.Quarto = {
 </section>
 <section id="get-the-course-files" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span> Get the Course Files</h1>
-<p>For the seminar, we work inside the course repository.</p>
-<p>Course repository:</p>
-<p><a href="https://github.com/NikolinaFiliposki/social-movements-digital-space-2026"><strong>Social Movements in the Digital Space — GitHub</strong></a></p>
-<p>The relevant structure for Session 3b is:</p>
-<pre class="text"><code>social_movements_digital_space/
+<p>Before continuing, complete the <strong>GitHub Course Setup</strong>.</p>
+<p>The course repository contains the teaching scripts and datasets.</p>
+<p>For Session 3b, the relevant structure is:</p>
+<pre class="text"><code>course-repository/
 └── 03b_r_crash_course/
     ├── code/
     ├── data/
     └── slides/</code></pre>
-<p>The student script and teaching dataset will already be provided there.</p>
-<p>Do <strong>not</strong> move individual data files to your Desktop just to make a path work.</p>
+<p>The exact name of the outermost repository folder may differ.</p>
+<p>Do <strong>not</strong> move individual data files to your Desktop simply to make a path work.</p>
 <p>Keeping the repository structure intact makes the analysis easier to reproduce.</p>
 </section>
-<section id="test-the-course-dataset" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Test the Course Dataset</h1>
-<p>After you have the course repository, open RStudio and run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>posts <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"03b_r_crash_course"</span>,</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"data"</span>,</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bluesky_climate_sample.csv"</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(posts)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="open-the-course-rstudio-project" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Open the Course RStudio Project</h1>
+<p>At the top level of the course repository, locate:</p>
+<pre class="text"><code>social_movements_digital_space.Rproj</code></pre>
+<p>Double-click this file.</p>
+<p>It should open the course project in RStudio.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For the course exercises, open the <code>.Rproj</code> file before running the R scripts.</p>
+<p>This gives R a consistent project root and allows the <code>here</code> package to find the course folders correctly.</p>
+</div>
+</div>
+<p>After opening the project, the RStudio window should indicate that you are working inside the course project.</p>
+</section>
+<section id="open-the-session-3b-starter-script" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Open the Session 3b Starter Script</h1>
+<p>Inside RStudio, open:</p>
+<pre class="text"><code>03b_r_crash_course/
+└── code/
+    └── session3b_starter.R</code></pre>
+<p>Use the provided starter script rather than creating a new empty script.</p>
+</section>
+<section id="test-the-course-dataset" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Test the Course Dataset</h1>
+<p>Make sure the course <code>.Rproj</code> is open.</p>
+<p>Then run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>posts <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"03b_r_crash_course"</span>,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"data"</span>,</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bluesky_climate_sample.csv"</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(posts)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>For the Session 3b teaching dataset, this should return:</p>
 <pre class="text"><code>[1] 1000</code></pre>
-<p>If it does, you are ready for the session.</p>
+<p>You can also inspect the data:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(posts)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If the dataset loads and <code>nrow(posts)</code> returns <code>1000</code>, your course setup is working.</p>
 </section>
-<section id="common-problems" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Common Problems</h1>
-<section id="there-is-no-package-called-..." class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="there-is-no-package-called-..."><span class="header-section-number">10.1</span> <code>there is no package called ...</code></h2>
+<section id="common-problems" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Common Problems</h1>
+<section id="there-is-no-package-called-..." class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="there-is-no-package-called-..."><span class="header-section-number">12.1</span> <code>there is no package called ...</code></h2>
 <p>For example:</p>
 <pre class="text"><code>there is no package called 'tidyverse'</code></pre>
 <p>The package has probably not been installed yet.</p>
 <p>Run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Then load it:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="object-...-not-found" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="object-...-not-found"><span class="header-section-number">10.2</span> <code>object '...' not found</code></h2>
+<section id="object-...-not-found" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="object-...-not-found"><span class="header-section-number">12.2</span> <code>object '...' not found</code></h2>
 <p>For example:</p>
 <pre class="text"><code>object 'posts' not found</code></pre>
 <p>R does not currently know an object with that name.</p>
@@ -371,19 +412,22 @@ window.Quarto = {
 <li>Did you restart R and forget to rerun earlier code?</li>
 </ul>
 </section>
-<section id="file-does-not-exist" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="file-does-not-exist"><span class="header-section-number">10.3</span> <code>file does not exist</code></h2>
+<section id="file-does-not-exist" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="file-does-not-exist"><span class="header-section-number">12.3</span> <code>file does not exist</code></h2>
 <p>Check:</p>
 <ul>
+<li>Did you open <code>social_movements_digital_space.Rproj</code>?</li>
 <li>Is the course repository complete?</li>
 <li>Did you move or rename folders?</li>
+<li>Is the dataset still inside <code>03b_r_crash_course/data/</code>?</li>
 <li>Are you using the provided <code>here()</code> path?</li>
-<li>Is the dataset inside <code>03b_r_crash_course/data/</code>?</li>
-<li>Did you open R from somewhere outside the course repository?</li>
 </ul>
+<p>You can also run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">here</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The output should point to the root of the course repository.</p>
 </section>
-<section id="rstudio-opens-but-r-does-not-work" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="rstudio-opens-but-r-does-not-work"><span class="header-section-number">10.4</span> RStudio opens, but R does not work</h2>
+<section id="rstudio-opens-but-r-does-not-work" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="rstudio-opens-but-r-does-not-work"><span class="header-section-number">12.4</span> RStudio opens, but R does not work</h2>
 <p>Check that <strong>R itself is installed</strong>.</p>
 <p>If necessary:</p>
 <ol type="1">
@@ -392,16 +436,16 @@ window.Quarto = {
 <li>reopen RStudio.</li>
 </ol>
 </section>
-<section id="package-installation-produces-lots-of-text" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="package-installation-produces-lots-of-text"><span class="header-section-number">10.5</span> Package installation produces lots of text</h2>
-<p>That is normal.</p>
-<p>Installing packages can produce many lines of output in the Console.</p>
+<section id="package-installation-produces-lots-of-text" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="package-installation-produces-lots-of-text"><span class="header-section-number">12.5</span> Package installation produces lots of text</h2>
+<p>This is normal.</p>
+<p>Installing packages can produce many lines of output.</p>
 <p>Wait until R gives you the <code>&gt;</code> prompt again.</p>
 <p>Then test:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="rstudio-asks-to-install-additional-tools" class="level2" data-number="10.6">
-<h2 data-number="10.6" class="anchored" data-anchor-id="rstudio-asks-to-install-additional-tools"><span class="header-section-number">10.6</span> RStudio asks to install additional tools</h2>
+<section id="rstudio-asks-to-install-additional-tools" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="rstudio-asks-to-install-additional-tools"><span class="header-section-number">12.6</span> RStudio asks to install additional tools</h2>
 <p>Do not install additional development tools unless the installation process specifically requires them.</p>
 <p>For this crash course, you should normally only need:</p>
 <ul>
@@ -410,72 +454,84 @@ window.Quarto = {
 <li>the required R packages.</li>
 </ul>
 </section>
-<section id="installation-is-blocked-by-your-computer" class="level2" data-number="10.7">
-<h2 data-number="10.7" class="anchored" data-anchor-id="installation-is-blocked-by-your-computer"><span class="header-section-number">10.7</span> Installation is blocked by your computer</h2>
-<p>If you are using a university-managed or otherwise restricted computer, you may not have permission to install software.</p>
+<section id="installation-is-blocked-by-your-computer" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="installation-is-blocked-by-your-computer"><span class="header-section-number">12.7</span> Installation is blocked by your computer</h2>
+<p>If you use a university-managed or otherwise restricted computer, you may not have permission to install software.</p>
 <p>Please identify this <strong>before the session</strong> and contact the instructor.</p>
 </section>
 </section>
-<section id="if-local-installation-does-not-work" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> If Local Installation Does Not Work</h1>
+<section id="if-local-installation-does-not-work" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> If Local Installation Does Not Work</h1>
 <p>The preferred setup for the seminar is:</p>
-<p><span class="math display">\[
-\text{R}
-+
-\text{RStudio Desktop}
-+
-\text{course repository}
-\]</span></p>
+<p>R + RStudio Desktop + course repository</p>
 <p>If your computer prevents a local installation, a browser-based R environment can be used as a temporary fallback.</p>
 <p>One option is:</p>
 <p><a href="https://posit.cloud/"><strong>Posit Cloud</strong></a></p>
-<p>Posit Cloud runs an RStudio-style environment in the browser.</p>
-<p><strong>Important:</strong> use the local RStudio setup if possible, because that is the workflow used in the course.</p>
-<p>If you need the browser-based fallback, contact the instructor before the session so that the course files can be set up correctly.</p>
+<p>Posit Cloud provides an RStudio-style environment in the browser.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use the local RStudio setup if possible because that is the workflow used in the course.</p>
+<p>If you need the browser-based fallback, contact the instructor before the session so the course files can be set up correctly.</p>
+</div>
+</div>
 </section>
-<section id="where-to-get-help" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Where to Get Help</h1>
+<section id="where-to-get-help" class="level1" data-number="14">
+<h1 data-number="14"><span class="header-section-number">14</span> Where to Get Help</h1>
 <p>You are not expected to memorize R or solve every problem alone.</p>
-<section id="official-software-and-documentation" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="official-software-and-documentation"><span class="header-section-number">12.1</span> Official software and documentation</h2>
+<section id="official-software-and-documentation" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="official-software-and-documentation"><span class="header-section-number">14.1</span> Official software and documentation</h2>
 <ul>
-<li><p><a href="https://www.r-project.org/"><strong>The R Project</strong></a> Official R downloads and documentation.</p></li>
-<li><p><a href="https://posit.co/download/rstudio-desktop/"><strong>RStudio Desktop / Posit</strong></a> RStudio download and installation.</p></li>
-<li><p><a href="https://docs.posit.co/ide/user/"><strong>RStudio User Guide</strong></a> Documentation for the RStudio interface.</p></li>
+<li><p><a href="https://www.r-project.org/"><strong>The R Project</strong></a><br>
+Official R downloads and documentation.</p></li>
+<li><p><a href="https://posit.co/download/rstudio-desktop/"><strong>RStudio Desktop / Posit</strong></a><br>
+RStudio download and installation.</p></li>
+<li><p><a href="https://docs.posit.co/ide/user/"><strong>RStudio User Guide</strong></a><br>
+Documentation for the RStudio interface.</p></li>
 </ul>
 </section>
-<section id="learning-r" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="learning-r"><span class="header-section-number">12.2</span> Learning R</h2>
+<section id="learning-r" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="learning-r"><span class="header-section-number">14.2</span> Learning R</h2>
 <ul>
-<li><p><a href="https://r4ds.hadley.nz/"><strong>R for Data Science</strong></a> A free online introduction to working with data in R.</p></li>
-<li><p><a href="https://datacarpentry.org/r-socialsci/"><strong>Data Analysis and Visualization with R for Social Scientists</strong></a> Beginner-oriented R material designed around social-science data.</p></li>
+<li><p><a href="https://r4ds.hadley.nz/"><strong>R for Data Science</strong></a><br>
+A free online introduction to working with data in R.</p></li>
+<li><p><a href="https://datacarpentry.org/r-socialsci/"><strong>Data Analysis and Visualization with R for Social Scientists</strong></a><br>
+Beginner-oriented R material using social-science data.</p></li>
 </ul>
 </section>
-<section id="quick-reference" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="quick-reference"><span class="header-section-number">12.3</span> Quick reference</h2>
+<section id="quick-reference" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="quick-reference"><span class="header-section-number">14.3</span> Quick Reference</h2>
 <ul>
-<li><p><a href="https://opensource.posit.co/resources/cheatsheets/"><strong>Posit Cheatsheets</strong></a> Quick-reference guides for R, RStudio, <code>dplyr</code>, <code>ggplot2</code>, data import, and other tools.</p></li>
-<li><p><a href="https://r-graph-gallery.com/"><strong>The R Graph Gallery</strong></a> Hundreds of visualization examples with reproducible R code.</p></li>
+<li><p><a href="https://posit.co/resources/cheatsheets/"><strong>Posit Cheatsheets</strong></a><br>
+Quick-reference guides for R, RStudio, <code>dplyr</code>, <code>ggplot2</code>, data import, and other tools.</p></li>
+<li><p><a href="https://r-graph-gallery.com/"><strong>The R Graph Gallery</strong></a><br>
+Visualization examples with reproducible R code.</p></li>
 </ul>
 </section>
 </section>
-<section id="which-resource-should-i-use" class="level1" data-number="13">
-<h1 data-number="13"><span class="header-section-number">13</span> Which Resource Should I Use?</h1>
-<p>If…</p>
+<section id="which-resource-should-i-use" class="level1" data-number="15">
+<h1 data-number="15"><span class="header-section-number">15</span> Which Resource Should I Use?</h1>
 <p><strong>I forgot how a command works</strong></p>
-<p>→ check the <strong>Posit Cheatsheets</strong> or R Help.</p>
+<p>→ Check the <strong>Posit Cheatsheets</strong> or R Help.</p>
 <p><strong>I want to understand an R workflow</strong></p>
-<p>→ look at <strong>R for Data Science</strong>.</p>
+<p>→ Look at <strong>R for Data Science</strong>.</p>
 <p><strong>I want another beginner explanation</strong></p>
-<p>→ use <strong>R for Social Scientists</strong>.</p>
+<p>→ Use <strong>R for Social Scientists</strong>.</p>
 <p><strong>I want to know how to create a graph</strong></p>
-<p>→ look at <strong>The R Graph Gallery</strong>.</p>
+<p>→ Look at <strong>The R Graph Gallery</strong>.</p>
 <p><strong>RStudio itself is behaving strangely</strong></p>
-<p>→ check the <strong>RStudio User Guide</strong>.</p>
+<p>→ Check the <strong>RStudio User Guide</strong>.</p>
 <p>Looking things up is a normal part of programming.</p>
 </section>
-<section id="final-checklist" class="level1" data-number="14">
-<h1 data-number="14"><span class="header-section-number">14</span> Final Checklist</h1>
+<section id="final-checklist" class="level1" data-number="16">
+<h1 data-number="16"><span class="header-section-number">16</span> Final Checklist</h1>
 <p>Before Session 3b:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">R is installed.</label></li>
@@ -486,13 +542,15 @@ window.Quarto = {
 <li><label><input type="checkbox"><code>here</code> is installed.</label></li>
 <li><label><input type="checkbox"><code>library(tidyverse)</code> works.</label></li>
 <li><label><input type="checkbox"><code>library(here)</code> works.</label></li>
-<li><label><input type="checkbox">I have access to the course repository.</label></li>
+<li><label><input type="checkbox">I can access the course repository.</label></li>
+<li><label><input type="checkbox">I opened <code>social_movements_digital_space.Rproj</code>.</label></li>
+<li><label><input type="checkbox">I can find <code>session3b_starter.R</code>.</label></li>
 <li><label><input type="checkbox">the teaching dataset loads.</label></li>
 <li><label><input type="checkbox"><code>nrow(posts)</code> returns <code>1000</code>.</label></li>
 </ul>
 </section>
-<section id="ready" class="level1" data-number="15">
-<h1 data-number="15"><span class="header-section-number">15</span> Ready</h1>
+<section id="ready" class="level1" data-number="17">
+<h1 data-number="17"><span class="header-section-number">17</span> Ready</h1>
 <p>If the final test works, you are ready.</p>
 <p>You do not need to study R before Session 3b.</p>
 <p>The point of the session is to learn it together.</p>
