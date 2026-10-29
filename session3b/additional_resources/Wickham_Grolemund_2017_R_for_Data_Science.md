@@ -1,0 +1,1 @@
+Wickham, Hadley, and Garrett Grolemund (2017). [R for Data Science: Import, Tidy, Transform, Visualize, and Model Data](https://r4ds.had.co.nz/). O'Reilly Media.
